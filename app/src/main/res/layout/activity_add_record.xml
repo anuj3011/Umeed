@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDDEDE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Age :"
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPictures" />
+
+    <TextView
+        android:id="@+id/phoneText2"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Date :"
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneInput" />
+
+    <TextView
+        android:id="@+id/AddressText"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Address :"
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+    <TextView
+        android:id="@+id/PhoneText"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Phone No :"
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Address2" />
+
+    <EditText
+        android:id="@+id/NameInput"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColor="#1B1A1A"
+        android:textColorHighlight="#CA2828"
+        android:textColorHint="#6E6868"
+        app:layout_constraintStart_toEndOf="@+id/imgPictures"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/AgeInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:textColor="#1B1A1A"
+        android:textColorHighlight="#CA2828"
+        android:textColorHint="#6E6868"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageText"
+        app:layout_constraintTop_toBottomOf="@+id/imgPictures" />
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="#1B1A1A"
+        android:textColorHighlight="#CA2828"
+        android:textColorHint="#6E6868"
+        app:layout_constraintStart_toEndOf="@+id/imgPictures"
+        app:layout_constraintTop_toBottomOf="@+id/NameInput" />
+
+    <EditText
+        android:id="@+id/PhoneInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Phone No. of Complainant"
+        android:inputType="phone"
+        android:textColor="#191717"
+        android:textColorHint="#6E6666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PhoneText"
+        app:layout_constraintTop_toBottomOf="@+id/Address2" />
+
+    <EditText
+        android:id="@+id/AddressInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Address of Complainant"
+        android:inputType="textPersonName"
+        android:textColor="#1B1A1A"
+        android:textColorHighlight="#171616"
+        android:textColorHint="#6E6868"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AddressText"
+        app:layout_constraintTop_toBottomOf="@+id/AgeInput" />
+
+    <EditText
+        android:id="@+id/DateInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date"
+        android:textColor="#1B1919"
+        android:textColorHint="#6E6666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneText2"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneInput" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="122dp"
+        android:onClick="addRecord"
+        android:text="Add Record"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgPictures"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="65dp"
+        android:background="#F1EBEB"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:onClick="ImageClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Address2"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressInput" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        app:layout_constraintBottom_toTopOf="@+id/imgPictures"
+        app:layout_constraintEnd_toStartOf="@+id/imgPictures"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgPictures"
+        app:layout_constraintTop_toBottomOf="@+id/imgPictures" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
